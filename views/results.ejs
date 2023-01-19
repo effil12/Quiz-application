@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/results.css">
+    <title>Quiz Results</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="overskrift">Charts</h1>
+        <div class="charts">
+            <div id="statistics">
+                <h2>SCORE: <span><%= quiz.score %></span>/<span><%= quiz.totalQuizPoints %></span>p <span>(<%= (quiz.score/quiz.totalQuizPoints*100).toFixed(0) %>%) </span></h2>
+                <h2>Correct Ratio: <span><%= quiz.rightAnswers.length %></span>/<span><%= Object.keys(quiz.questions).length %></span> <span>(<%= (quiz.rightAnswers.length/(Object.keys(quiz.questions)).length*100).toFixed(0) %>%)</span></h2>
+            </div>
+            <div id="questions-overview">
+                <ol>
+                    <% for (let key in quiz.questions) {%> 
+                        <li data-question-success="<%= quiz.questions[key].userGuessedCorrectly %>">
+                            <div class="questionsDiv">
+                                <div>
+                                    <div id="question">
+                                        <h1></h1>
+                                        <h2><%= quiz.questions[key].title %> </h2>
+                                    </div>
+                                    <div id="options">
+                                        <%quiz.questions[key].answers.forEach(elem => {%> 
+                                            <button type="button" class="answers"> <%= elem %> </button>
+                                        <%})%>   
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    <% } %> 
+                </ol>
+            </div>
+        </div>
+        <form action="/result?_method=DELETE" method="post">
+            <button type="submit" id="btn">Home</button>
+        </form>
+    </div>
+
+    <script src="/js/result.js"></script>
+</body>
+</html>

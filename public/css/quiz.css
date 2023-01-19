@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+    margin: 0;
+    word-break: break-word;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(29, 29, 68);
+}
+button {
+    border: none;
+    border-radius: 3px;
+}
+.container {
+    position: relative;
+    padding: 10px;
+    width: 60%;
+    border-radius: 4px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(57,78,168,1) 100%);
+    color: white;
+    font-family: 'poppins', sans-serif;
+}
+#question {
+    font-size: 2.3rem;
+}
+#title {
+    margin-bottom: 20px;
+}
+.answers {
+    background-color: #4b4bda;
+    border: none;
+    border-radius: 3px;
+    font-size: 27px;
+    padding: 10px;
+    cursor: pointer;
+}
+#right-answer {
+    background-color: green;
+    color: white;
+}
+#wrong-answer {
+    background-color: red;
+    color: white;
+}
+.questionsDiv {
+    display: flex;
+    justify-content: space-between;
+}
+#points-anim {
+    color: rgb(2, 190, 2);
+}
+#btn {
+    margin-top: 5px;
+    font-size: 20px;
+    background-color: rgb(142, 150, 170);
+    height: 30px;
+}
+#p {
+    font-size: 18px;
+}
+#footer {
+    margin-top: 20px;
+}
+#footer-1 {
+    font-size: 20px;
+}
+#footer-1 span {
+    color: rgb(2, 190, 2);
+}

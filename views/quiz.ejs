@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/quiz.css">
+    <title>Questions</title>
+</head>
+<body>
+    <div class="container">
+        <div class="questionsDiv">
+            <div>
+                <div id="question">
+                    <h1></h1>
+                    <h2 id="title"><%= data.question.title %> </h2>
+                </div>
+                <div id="options">
+                    <%data.question.answers.forEach(elem => {%> 
+                        <button type="button" class="answers"> <%= elem %> </button>
+                    <%})%>   
+                </div>
+            </div>
+            <div id="p">
+                Quiz Points: <span id="total-points"><%= data.totalPoints%></span>p 
+            </div>
+        </div>
+        <div>
+            <button type="button" value="button" id="btn" disabled>Next</button>
+        </div>
+        <div id="footer">
+            <div id="footer-1">Score: <span id="score"><%= data.score %></span><span>p</span>  </div>
+            <p><span id="param"><%=data.param%></span>/<%=data.questionsLength%></p>
+        </div>
+    </div>
+
+    <script src="/js/quiz.js"></script>
+</body>
+</html>

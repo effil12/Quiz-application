@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+    margin: 0;
+    word-break: break-word;
+    box-sizing: border-box;
+}
+p, h1, h2, h3, li {
+    color: white;
+}
+button {
+    border: none;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(29, 29, 68);
+}
+.container {
+    background-color: rgb(54, 4, 54);
+    width: 70%;
+    padding: 10px;
+    border-radius: 4px;
+    font-family: sans-serif;
+}
+#overskrift {
+    font-size: 2.5rem;
+    text-align: center;
+}
+.charts {
+    margin-top: 10px;
+    display: flex;
+}
+#statistics {
+    flex: 1;
+    font-size: 1.5rem;
+}
+#statistics h2 {
+    margin-bottom: 10px;
+}
+#questions-overview {
+    flex: 1;
+    list-style-position: inside;
+}
+#questions-overview li {
+    margin-bottom: 6px;
+    padding: 5px;
+    border-radius: 2px;
+}
+#btn {
+    cursor: pointer;
+    float: right;
+    margin-top: 18px;
+    border-radius: 3px;
+    font-size: 25px;
+    height: 40px;
+}
+li[data-question-success="false"] {
+    background-color: red;
+}
+li[data-question-success="true"] {
+    background-color: green;
+}
